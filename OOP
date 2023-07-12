@@ -1,0 +1,105 @@
+OOP 5 가지 특징
+
+1. Object
+2. Class
+3. Encapsulation(캡슐화)
+4. Ingeritance(상속형)
+5. Polymorphism(다형성)
+
+
+
+캡슐화
+    가챠 캡슐 - 내용물을 숨기는 것
+    알약 캠슐 - 복용이 쉽다.
+    
+    보여줄 것만 보여주고 그렇지 않으면 숨긴다.
+
+    정보를 숨김( Information Hiding)
+        사용법을 쉽게
+
+
+상속
+    Inheritance(상속) or Derivation(파생)
+    
+    양쪽의 언어로 사용하기도 함.
+
+    Inheritance(상속)                      Derivation(파생)
+    Parent Class(부모 클래스)               Base Class (기반 클래스)
+    Child Class (자식 클래스)               Derived Class (파생 클래스)
+
+다형성
+    상황에 따라 서로 다른 형태로 해석할 수 있다.
+    상속과 관련된 것.
+
+
+---------------------------------------------------------------------
+
+
+<클래스의 표기 형태>
+
+Class 이름 : 부모
+{
+    접근 제한자
+    멤버
+    .
+    .
+    .
+    .
+};
+
+
+Access Modifier(접근 제한자)
+
+    public
+        공개
+        클래스 내부(멤버 함수)/외부(인스턴스)에서 모두 사용이 가능
+
+    private
+        비공개
+        클래스 내부에서만 접근이 가능하고 외부(인스턴스)에서는 불가능
+
+    protected
+
+
+
+
+클래스와 인스턴스
+
+// 구조체로 했을 경우
+struct Galaxy
+{
+    int color;
+};
+
+int GetColor(Galaxy phone)
+{
+    return phone.color;
+}
+
+int main()
+{
+    Galaxy phone;
+    GetColor(phone);
+}
+
+
+// 클래스로 했을 경우
+class Galaxy
+{
+public:
+    int color;
+
+    int GetColor()
+    {
+        return color;
+    }
+}
+
+
+int main()
+{
+    Galaxy phone1;
+    phone1.GetColor();
+}
+// 암시적 오브젝트(Implict Object)
+// this( 나 자신이라는 뜻)
